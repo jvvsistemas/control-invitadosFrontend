@@ -1,43 +1,3 @@
-/*
-const form = document.getElementById("form-rsvp");
-
-let enviado = false;
-
-form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    if (enviado) return; // <-- evita doble envío
-    enviado = true;
-
-    document.querySelector("button[type='submit']").disabled = true;
-
-    const data = {
-        nombre: document.getElementById("nombre").value,
-        acompanantes: document.getElementById("acompanantes").value,
-        //asistencia: document.getElementById("asistencia").value,
-        asistencia: document.querySelector('input[name="asistencia"]:checked').value,
-        mensaje: document.getElementById("mensaje").value,
-        // INCLUIR EL TOKEN EN EL BODY
-        //tokenAcceso: token
-    };
-
-    const response = await fetch("https://control-invitados-backend.onrender.com:8080/rsvp/confirmar", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    });
-
-    if (response.ok) {
-        mostrarMensajeBonito();
-    } else {
-        alert("Error al enviar.");
-    }
-});
-
-function mostrarMensajeBonito() {
-    document.getElementById("mensaje-exito").classList.remove("d-none");
-}
-    */
 const API_URL = "https://control-invitados-backend.onrender.com";
 const form = document.getElementById("form-rsvp");
 let enviado = false;
@@ -60,7 +20,7 @@ form.addEventListener("submit", async function (e) {
         tokenAcceso: tokenAcceso
     };
 
-    const response = await fetch(`${API_URL}/admin/rsvp/confirmar`, {
+    const response = await fetch(`${API_URL}/rsvp/confirmar`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
