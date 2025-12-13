@@ -1,0 +1,94 @@
+const API_URL = "http://127.0.0.1:8083";
+async function cargarInvitados() {
+    const response = await fetch(`${API_URL}/admin/listarInvitados`);
+    const invitados = await response.json();
+
+
+
+    
+    // Dashboard
+    document.getElementById("dash-total").innerText = invitados.length;
+    document.getElementById("dash-confirmados").innerText = invitados.filter(i => i.confirmado).length;
+    document.getElementById("dash-pendientes").innerText = invitados.filter(i => !i.confirmado).length;
+
+    const tabla = document.getElementById("tabla-invitados");
+    tabla.innerHTML = "";
+
+    invitados.forEach((inv, index) => {
+        const fila = document.createElement("tr");
+
+        fila.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${inv.nombre}</td>
+            <td>${inv.acompanantes}</td>
+            <td>${inv.confirmado ? "✔️ Sí" : "❌ No"}</td>
+            <td><code>${inv.tokenAcceso}</code></td>
+
+            <td>
+                <button class="btn btn-primary btn-sm me-2" onclick="copiarEnlace('${inv.tokenAcceso}')">
+                    <i class="bi bi-link-45deg"></i>
+                </button>
+
+                <button class="btn btn-success btn-sm me-2" onclick="enviarWhatsapp('${inv.nombre}','${inv.tokenAcceso}')">
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+
+                <button class="btn btn-warning btn-sm" onclick="regenerarToken(${inv.id})">
+                    <i class="bi bi-arrow-repeat"></i>
+                </button>
+            </td>
+        `;  
+
+        tabla.appendChild(fila);
+    });
+}
+
+/* COPIAR ENLACE */
+function copiarEnlace(token) {
+    const url = `http://127.0.0.1:8083/invitacion?t=${token}`;
+    navigator.clipboard.writeText(url);
+    alert("Enlace copiado:\n" + url);
+}
+
+/* ENVIAR WHATSAPP */
+function enviarWhatsapp(nombre, token) {
+    const url = `http://127.0.0.1:5500/index.html?t=${token}`;
+    const mensaje = `Hola ${nombre}, te compartimos tu invitación:\n${url}`;
+    window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, "_blank");
+}
+
+/* REGENERAR TOKEN */
+async function regenerarToken(id) {
+    if (!confirm("¿Regenerar token para este invitado?")) return;
+
+    await fetch(`${API_URL}/admin/regenerar/${id}`, { method: "PUT" });
+    alert("Token regenerado.");
+    cargarInvitados();
+}
+
+
+
+
+
+
+/* EXPORTAR A EXCEL */
+document.getElementById("btn-exportar").addEventListener("click", async () => {
+    const response = await fetch(`${API_URL}/admin/listarInvitados`);
+    const invitados = await response.json();
+
+    let csv = "Nombre,Pases,Confirmado,Token\n";
+
+    invitados.forEach(i => {
+        csv += `${i.nombre},${i.acompanantes},${i.confirmado},${i.tokenAcceso}\n`;
+    });
+
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "lista_invitados.csv";
+    a.click();
+});
+
+cargarInvitados();
