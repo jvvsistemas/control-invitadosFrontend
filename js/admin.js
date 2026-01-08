@@ -45,7 +45,7 @@ async function cargarInvitados() {
 
 /* COPIAR ENLACE */
 function copiarEnlace(token) {
-    const url = `https://control-invitados-xv.onrender.com/index.html?t=${token)`;
+    const url = `https://control-invitados-xv.onrender.com/index.html?t=${token}`;
     navigator.clipboard.writeText(url);
     alert("Enlace copiado:\n" + url);
 }
