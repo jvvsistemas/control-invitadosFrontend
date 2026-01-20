@@ -22,17 +22,16 @@ async function cargarInvitados() {
             <td>${inv.nombre}</td>
             <td>${inv.acompanantes}</td>
             <td>${inv.confirmado ? "✔️ Sí" : "❌ No"}</td>
-            <td><code>${inv.tokenAcceso}</code></td>
+           
 
             <td>
                 <button class="btn btn-primary btn-sm me-2" onclick="copiarEnlace('${inv.tokenAcceso}')">
                     <i class="bi bi-link-45deg"></i>
                 </button>
 
-                <!--
                 <button class="btn btn-success btn-sm me-2" onclick="enviarWhatsapp('${inv.nombre}','${inv.tokenAcceso}')">
                     <i class="bi bi-whatsapp"></i>
-                </button>!-->
+                </button>
 
                 <button class="btn btn-warning btn-sm" onclick="regenerarToken(${inv.id})">
                     <i class="bi bi-arrow-repeat"></i>
