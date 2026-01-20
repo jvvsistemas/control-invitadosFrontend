@@ -35,7 +35,7 @@ async function cargarDatosInvitado() {
 
 cargarDatosInvitado();
 */
-const API_URL = "https://control-invitados-backend.onrender.com";
+const API_URL = "https://control-invitadosbackend.onrender.com";                 
 const TOKEN_STORAGE_KEY = 'invitation_token';
 const params = new URLSearchParams(window.location.search);
 const token = params.get("t");

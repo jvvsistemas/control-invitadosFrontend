@@ -1,4 +1,4 @@
-const API_URL = "https://control-invitados-backend.onrender.com";
+const API_URL = "https://control-invitadosbackend.onrender.com";
 document.getElementById("form-crear-lista-invitados").addEventListener("submit", async function (e) {
     e.preventDefault();
 

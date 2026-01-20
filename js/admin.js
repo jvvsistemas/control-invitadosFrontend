@@ -45,14 +45,14 @@ async function cargarInvitados() {
 
 /* COPIAR ENLACE */
 function copiarEnlace(token) {
-    const url = `https://control-invitados-xv.onrender.com/index.html?t=${token}`;
+    const url = `https://control-invitados-mis-xv.onrender.com//index.html?t=${token}`;
     navigator.clipboard.writeText(url);
     alert("Enlace copiado:\n" + url);
 }
 
 /* ENVIAR WHATSAPP */
 function enviarWhatsapp(nombre, token) {
-    const url = `https://control-invitados-xv.onrender.com/index.html?t=${token}`;
+    const url = `https://control-invitados-mis-xv.onrender.com//index.html?t=${token}`;
     const mensaje = `Hola ${nombre}, te compartimos tu invitación:\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
@@ -73,7 +73,7 @@ async function regenerarToken(id) {
 
 /* EXPORTAR A EXCEL */
 document.getElementById("btn-exportar").addEventListener("click", async () => {
-    const response = await fetch(`https://control-invitados-xv.onrender.com/admin/listarInvitados`);
+    const response = await fetch(`https://control-invitados-backend.onrender.com/admin/listarInvitados`);
     const invitados = await response.json();
 
     let csv = "Nombre,Pases,Confirmado,Token\n";

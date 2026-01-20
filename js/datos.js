@@ -20,7 +20,7 @@ form.addEventListener("submit", async function (e) {
         tokenAcceso: tokenAcceso
     };
 
-    const response = await fetch("https://control-invitados-backend.onrender.com/rsvp/confirmar", {                           
+    const response = await fetch("https://control-invitadosbackend.onrender.com/rsvp/confirmar", {                           
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
