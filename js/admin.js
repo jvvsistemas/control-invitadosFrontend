@@ -1,4 +1,4 @@
-const API_URL = "https://control-invitados-backend.onrender.com";
+const API_URL = "https://control-invitadosbackend.onrender.com";
 async function cargarInvitados() {
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
