@@ -290,7 +290,7 @@ div.desc {
   /*  para el texto**/
 .texto-xv {
   font-family: 'MonteCarlo', cursive;
-  font-size: 3 rem;
+  font-size: 3.3 rem;
   text-align: center;
   color: #ff6fb1;
   letter-spacing: 1px;
@@ -409,7 +409,8 @@ div.desc {
   font-size: 3 rem;
   text-align: center;
   color: #ff4fa3;
-  letter-spacing: 1px;
+  /*letter-spacing: 1px;*/
+    /*letter-spacing: 1px;*/
 
   animation: brilloFinal 1.2s ease forwards;
   animation-delay: calc(var(--total) * 0.12s);
