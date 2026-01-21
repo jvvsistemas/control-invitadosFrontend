@@ -406,10 +406,10 @@ div.desc {
 
 .texto-xv-typing {
   font-family: 'MonteCarlo', cursive;
-  font-size: 3.8rem;
+  font-size: 3 rem;
   text-align: center;
   color: #ff4fa3;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 
   animation: brilloFinal 1.2s ease forwards;
   animation-delay: calc(var(--total) * 0.12s);
