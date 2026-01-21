@@ -1,4 +1,4 @@
-const API_URL = "https://control-invitados-backend.onrender.com";
+const API_URL = "https://control-invitadosbackend.onrender.com";
 async function cargarInvitados() {
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
@@ -19,7 +19,7 @@ async function cargarInvitados() {
             <td>${inv.nombre}</td>
             <td>${inv.acompanantes}</td>
             <td>${inv.confirmado ? "✔️ Sí" : "❌ No"}</td>
-            <td><code>${inv.tokenAcceso}</code></td>
+           
 
             <td>
                 <button class="btn btn-primary btn-sm me-2" onclick="copiarEnlace('${inv.tokenAcceso}')">
