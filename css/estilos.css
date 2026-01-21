@@ -290,9 +290,9 @@ div.desc {
   /*  para el texto**/
 .texto-xv {
   font-family: 'MonteCarlo', cursive;
-  font-size: 3.3 rem;
+  font-size: 3.7 rem;
   text-align: center;
-  color: #ff6fb1;
+  color: #e72a7f;
   letter-spacing: 1px;
   opacity: 0;
   animation: aparecerBrillo 2.5s ease forwards;
@@ -438,6 +438,48 @@ div.desc {
       0 0 14px rgba(255,154,203,0.4);
   }
 }
+/*  esrilo para cards
+.tarjeta-apreciable {
+  background: linear-gradient(
+    135deg,
+    #f9c5d1,
+    #fbc2eb,
+    #fddde6
+  );
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(233, 150, 190, 0.35);
+}
+
+/* texto */
+.tarjeta-cards {
+  background: linear-gradient(
+    135deg,
+    #f9c5d1,
+    #fbc2eb,
+    #fddde6
+  );
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(233, 150, 190, 0.35);
+}
+
+/* texto */
+.tarjeta-apreciable h2,
+.tarjeta-apreciable p {
+  color: #5a2a3a;
+}
+
+.tarjeta-apreciable {
+  background: linear-gradient(
+    135deg,
+    rgba(249,197,209,0.85),
+    rgba(251,194,235,0.85)
+  );
+  backdrop-filter: blur(6px);
+}
+
+
 
 
 
