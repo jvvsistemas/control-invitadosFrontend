@@ -43,7 +43,7 @@ function deshabilitarFormulario() {
 
     const msg = document.getElementById("msg-success");
     msg.classList.remove("d-none");
-    msg.innerHTML = "Ya has confirmado tu asistencia 💖";
+    msg.innerHTML = "Ya has confirmado tu asistencia 💖, Recuerda... se puntual para no perderte de esta gran celebración.";
 }
 
 cargarDatosInvitado();
