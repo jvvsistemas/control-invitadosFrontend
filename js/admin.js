@@ -50,7 +50,7 @@ function copiarEnlace(token) {
 /* ENVIAR WHATSAPP */
 function enviarWhatsapp(nombre, token) {
     const url = `https://control-invitados-mis-xv.onrender.com//index.html?t=${token}`;
-    const mensaje = `Hola ${nombre}, te compartimos tu invitación:\n${url} Atte: Leslie Abril`;
+    const mensaje = `Hola ${nombre}, te compartimos tu invitación:\n${url}`;
     window.open(`https://wa.me/?text=${encodeURIComponent(mensaje)}`, "_blank");
 }
 
