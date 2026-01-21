@@ -17,8 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/estilos.css">  
-  
+  <link rel="stylesheet" href="./css/estilos.css">
+
 </head>
 
 <body data-bs-theme="light">
@@ -35,12 +35,19 @@
     <!-- banner 1 main-->
     <section class="banners_main banner-1 d-flex  flex-column justify-content-center text-center">
       <div class="banners-titulo bg-body-secondary py-5">
-        <h2 class="lora-type">Mis XV años</h2>
-        <p class="montecarlo-regular">Leslie Abril Valencia Legorreta</p>
-        <h2 class="text-center lora-type2">28 de Febrero de 2026</h2>
+        <!--<h2 class="lora-type">Mis XV años</h2>!-->
+        <h2 class="texto-xv">Mis XV Años</h2>
+        <h2 class="texto-name_q">Leslie Abril Valencia Legorreta</h2>
+        <!--<p class="montecarlo-regular">Leslie Abril Valencia Legorreta</p>!-->
+        <h2 class="texto-xv">28 de Febrero de 2026</h2>
       </div>
     </section><!-- fin banner main-->
-
+    
+    <!--  Galería Collage  -->
+    <section id="galeria-rosa">
+      <div class="galeria-track" id="galeriaTrack"></div>
+    </section>
+    
     <!-- Bloque principal -->
     <section class="py-5">
       <!--<h2 class="text-center montecarlo-regular">Apreciable</h2>!-->
@@ -55,13 +62,15 @@
 
             <h2 class="text-center montecarlo-regular ">Apreciable</h2>
             <p id="nombre-invitado" class="lora-type2 text-center"></p>
-            <p  class="lora-type2 text-center"> y familia</p>
+            <p class="lora-type2 text-center"> y familia</p>
             <p id="pases-invitado" class="lora-type2 text-center"> </p>
-            
 
-          </div>     
+
+          </div>
         </div>
-        <div><p class="nota-pases">Favor de mostrar al ingresar al salón.</p></div>
+        <div>
+          <p class="nota-pases">Favor de mostrar al ingresar al salón.</p>
+        </div>
 
     </section><!--  fin Bloque principal -->
     <!-- banner 2 -->
@@ -77,9 +86,15 @@
       <!--<h2 class="fw-bold text-center pb-1">Nuestros Productos</h2>!-->
       <p class="lora-type2 text-center">Con la bendición de Dios y en compañía de mis padres</p>
       <div class="d-flex  flex-column justify-content-center text-center">
-        <div><p class="text-center montecarlo-regular ">Nubia Isabel Legorreta Hernández</p></div>
-        <div><p class="text-center montecarlo-regular ">Y</p></div>
-        <div><p class="text-center montecarlo-regular ">Jacobo Valencia Vázquez</p></div>
+        <div>
+          <p class="text-center montecarlo-regular ">Nubia Isabel Legorreta Hernández</p>
+        </div>
+        <div>
+          <p class="text-center montecarlo-regular ">Y</p>
+        </div>
+        <div>
+          <p class="text-center montecarlo-regular ">Jacobo Valencia Vázquez</p>
+        </div>
       </div>
     </section> <!--  fin  bloque personalizado 2 -->
     <!-- banner 3 -->
@@ -190,11 +205,13 @@
                   <div class="d-flex align-items-center justify-content-start"
                     style="width:45%;position:absolute;left:55%;top:0">
                     <div class="d-flex align-items-center flex-row-reverse">
-                      <div class="ms-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
-                        class="lucide lucide-utensils-icon lucide-utensils">
-                        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/>
-                        <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></div>
+                      <div class="ms-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" class="lucide lucide-utensils-icon lucide-utensils">
+                          <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2" />
+                          <path d="M7 2v20" />
+                          <path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7" />
+                        </svg></div>
                       <div class="text-center itinerario_lora">
                         <p class="mb-1 fw-bold __className_62f150" style="color:#1c1717">7:00 pm</p>
                         <p class="mb-0 __className_536dc8" style="color:#1c1717;line-height:1.2">Cena</p>
@@ -202,16 +219,16 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <div class="position-relative mb-2" style="min-height:80px">
                   <div class="position-absolute"
                     style="left:50%;top:20px;width:12px;height:12px;background-color:#f1d5c7;border-radius:50%;transform:translateX(-50%);z-index:2">
                   </div>
-                  
+
                   <div class="d-flex align-items-center justify-content-end"
                     style="width:45%;position:absolute;left:0;top:0">
                     <div class="d-flex align-items-center flex-row">
-                     
+
                       <div class="text-center itinerario_lora">
                         <p class="mb-1 fw-bold __className_62f150" style="color:#1c1717">11:30 pm</p>
                         <p class="mb-0 __className_536dc8" style="color:#1c1717;line-height:1.2">Fin de la fiesta</p>
@@ -239,8 +256,7 @@
 
       <div class="container d-flex justify-content-around flex-wrap">
         <div class="card m-4" style="width: 20rem;">
-          <img src="./images/iglesia.JPG" class="card-img-top"
-            >
+          <img src="./images/iglesia.JPG" class="card-img-top">
           <div class="card-body">
             <h5 class="card-title  fw-bold">Parroquia de Nuestra Señora de Guadalupe</h5>
             <p class="card-text">Av Orquídeas Manzana 047,<br> Villa de las Flores, C.P 55710<br> San Francisco
@@ -312,30 +328,30 @@
         ¡Gracias por confirmar tu asistencia! Recuerda, se puntual y no pierdas detalle de esta gran celebración.
       </div>
       <div id="msg-error" class=" alert alert-danger text-center d-none" role="alert">
-        Ocurrió un error. Intenta nuevamente. 
+        Ocurrió un error. Intenta nuevamente.
       </div>
       <div id="msg-error2" class=" alert alert-danger text-center d-none" role="alert">
-        Invitación invalida 
+        Invitación invalida
       </div>
-      
+
       <!--  fin ventana de confirmacion de datos-->
       <!-- formulario -->
       <section class="py-4 container">
         <div class="row">
           <div class="col-10 col-xl-8 mx-auto">
             <form id="form-rsvp">
-              <h3 class="fw-bold p-3" id="lbl-confirm-directamente">Confirma directamente</h3>            
+              <h3 class="fw-bold p-3" id="lbl-confirm-directamente">Confirma directamente</h3>
               <div class="form-group mb-3">
                 <label for="nombre" class="form-label">Nombre del Invitado:</label>
                 <input type="text" id="nombre" class="form-control" disabled required>
               </div>
-            
+
               <div class="form-group mb-3">
                 <label for="acompanantes" class="form-label">Pases asignados (incluyéndote):</label>
                 <input type="number" id="acompanantes" class="form-control" min="0" disabled required>
                 <small class="form-text text-muted">Este es el número máximo de pases asignados.</small>
               </div>
-            
+
               <div class="form-group mb-3">
                 <label class="fw-bold d-block mb-2">¿Podrás asistir?</label>
                 <div class="form-check form-check-inline">
@@ -347,42 +363,44 @@
                   <label class="form-check-label" for="asistencia-no">No podré asistir</label>
                 </div>
               </div>
-            
+
               <div class="form-group mb-4">
                 <label for="mensaje" class="form-label">Mensaje o nota (Opcional):</label>
                 <textarea id="mensaje" class="form-control" placeholder="Mensaje opcional"></textarea>
               </div>
-            
+
               <button type="submit" class="btn boton-estandar w-100 fw-bold mt-3 py-3">Confirmar Asistencia</button>
-            
+
             </form>
-            </div>
           </div>
+        </div>
         </div>
       </section><!-- fin formulario -->
       <div id="msg-success" class="alert alert-success text-center d-none"></div>
       <div id="msg-error" class="alert alert-danger text-center d-none"></div>
 
-      
+
+    </section>
+
+    <!-- footer -->
+    <footer class="text-center">
+      <section class="banners_footer banner-footer d-flex  flex-column justify-content-center text-center">
+        <a class="btn" href="https://wa.me/5551076743"><i class="bi bi-whatsapp"></i></a>
+        <div class="p-1 fw-bold"> 2026<i class="bi bi-c-circle"></i> Desarrollado por JAVASystems</div>
       </section>
-      
-      <!-- footer -->
-      <footer class="text-center">
-        <section class="banners_footer banner-footer d-flex  flex-column justify-content-center text-center">
-          <a class="btn" href="https://wa.me/5551076743"><i class="bi bi-whatsapp"></i></a>
-          <div class="p-1 fw-bold"> 2026<i class="bi bi-c-circle"></i> Desarrollado por JAVASystems</div>
-        </section>
-      </footer><!-- fin footer -->
-      </main>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-      
-      <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
-      <script src="./js/spoty.js"></script>
-      <!--<script src="./autoForm.js"></script>!-->
-      <!--<script src="./datos.js"></script>!-->
-      <script src="./js/cargarInvitado.js"></script>
-      <script src="./js/datos.js"></script>
-      </body>
-      
-      </html>
+    </footer><!-- fin footer -->
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
+  <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+  <script src="./js/spoty.js"></script>
+  <!--<script src="./autoForm.js"></script>!-->
+  <!--<script src="./datos.js"></script>!-->
+  <script src="./js/cargarInvitado.js"></script>
+  <script src="./js/datos.js"></script>
+  <script src="./js/galeria.js"></script>
+</body>
+
+</html>

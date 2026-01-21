@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galería Rosa – Collage Vivo</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffd1e8, #ff9acb);
+    font-family: Arial, sans-serif;
+}
+.gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 40px;
+    animation: scroll 25s linear infinite;
+}
+.card {
+    min-width: 220px;
+    height: 320px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 20px 40px rgba(255, 20, 147, 0.35);
+    transform: scale(1);
+    transition: transform 0.4s ease;
+}
+.card:hover {
+    transform: scale(1.08);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .card {
+        min-width: 180px;
+        height: 260px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+    <div class="card" style="background-image: linear-gradient(120deg,#ff9acb,#ffc1dd);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff6fb1,#ffb3d9);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff85c2,#ffd6eb);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff4fa3,#ffb0d8);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff99cc,#ffe1f0);"></div>
+
+    <!-- duplicado para loop continuo -->
+    <div class="card" style="background-image: linear-gradient(120deg,#ff9acb,#ffc1dd);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff6fb1,#ffb3d9);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff85c2,#ffd6eb);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff4fa3,#ffb0d8);"></div>
+    <div class="card" style="background-image: linear-gradient(120deg,#ff99cc,#ffe1f0);"></div>
+</div>
+
+</body>
+</html>
+"""
+
+path = "/mnt/data/galeria_collage_rosa.html"
+with open(path, "w", encoding="utf-8") as f:
+    f.write(html_content)
