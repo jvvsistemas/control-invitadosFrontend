@@ -152,6 +152,15 @@ footer {
   color: #191919;
 
 }
+.nota-pases{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  color: #ee5555;
+
+}
 .confirmar_lora{
   font-family: "Lora", serif;
   font-optical-sizing: auto;
