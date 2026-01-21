@@ -30,9 +30,9 @@ async function cargarInvitados() {
                     <i class="bi bi-whatsapp"></i>
                 </button>
 
-                <button class="btn btn-warning btn-sm" onclick="regenerarToken(${inv.id})">
+                <!--<button class="btn btn-warning btn-sm" onclick="regenerarToken(${inv.id})">
                     <i class="bi bi-arrow-repeat"></i>
-                </button>
+                </button>!-->
             </td>
         `;  
 
