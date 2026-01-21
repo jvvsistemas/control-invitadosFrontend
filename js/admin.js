@@ -2,9 +2,6 @@ const API_URL = "https://control-invitados-backend.onrender.com";
 async function cargarInvitados() {
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
-
-
-
     
     // Dashboard
     document.getElementById("dash-total").innerText = invitados.length;
@@ -65,11 +62,6 @@ async function regenerarToken(id) {
     alert("Token regenerado.");
     cargarInvitados();
 }
-
-
-
-
-
 
 /* EXPORTAR A EXCEL */
 document.getElementById("btn-exportar").addEventListener("click", async () => {
