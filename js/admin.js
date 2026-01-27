@@ -2,12 +2,44 @@ const API_URL = "https://control-invitadosbackend.onrender.com";
 async function cargarInvitados() {
     const response = await fetch(`${API_URL}/admin/listarInvitados`);
     const invitados = await response.json();
-    
+
     // Dashboard
+    /*
     document.getElementById("dash-total").innerText = invitados.length;
     document.getElementById("dash-confirmados").innerText = invitados.filter(i => i.confirmado).length;
     document.getElementById("dash-pendientes").innerText = invitados.filter(i => !i.confirmado).length;
+     */
+    
+    /**  update 27/01/2026**/
 
+    // ===== PERSONAS =====
+    const totalPersonas = invitados.length;
+    const personasConfirmadas = invitados.filter(i => i.confirmado).length;
+    const personasPendientes = invitados.filter(i => !i.confirmado).length;
+
+    document.getElementById("dash-personas-total").innerText = totalPersonas;
+    document.getElementById("dash-personas-confirmados").innerText = personasConfirmadas;
+    document.getElementById("dash-personas-pendientes").innerText = personasPendientes;
+
+    // ===== PASES =====
+    let totalPases = 0;
+    let pasesConfirmados = 0;
+    let pasesDisponibles = 0;
+
+    invitados.forEach(i => {
+        totalPases += i.acompanantes;
+
+        if (i.confirmado) {
+            pasesConfirmados += i.acompanantes;
+        } else {
+            pasesDisponibles += i.acompanantes;
+        }
+    });
+
+    document.getElementById("dash-pases-total").innerText = totalPases;
+    document.getElementById("dash-pases-confirmados").innerText = pasesConfirmados;
+    document.getElementById("dash-pases-disponibles").innerText = pasesDisponibles;
+    /** * end update */
     const tabla = document.getElementById("tabla-invitados");
     tabla.innerHTML = "";
 
@@ -34,7 +66,7 @@ async function cargarInvitados() {
                     <i class="bi bi-arrow-repeat"></i>
                 </button>!-->
             </td>
-        `;  
+        `;
 
         tabla.appendChild(fila);
     });
