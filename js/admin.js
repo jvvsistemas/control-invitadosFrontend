@@ -25,6 +25,7 @@ async function cargarInvitados() {
     let totalPases = 0;
     let pasesConfirmados = 0;
     let pasesDisponibles = 0;
+    let pasesDisponibilidad = 100;
 
     invitados.forEach(i => {
         totalPases += i.acompanantes;
@@ -36,9 +37,14 @@ async function cargarInvitados() {
         }
     });
 
+    let pasesSinAsignar = pasesDisponibilidad - totalPases;
+
     document.getElementById("dash-pases-total").innerText = totalPases;
     document.getElementById("dash-pases-confirmados").innerText = pasesConfirmados;
     document.getElementById("dash-pases-disponibles").innerText = pasesDisponibles;
+    document.getElementById("dash-pases-disponibilidad").innerText = pasesDisponibilidad;
+    document.getElementById("dash-pases-sin-asignar").innerText = pasesSinAsignar;
+
     /** * end update */
     const tabla = document.getElementById("tabla-invitados");
     tabla.innerHTML = "";
