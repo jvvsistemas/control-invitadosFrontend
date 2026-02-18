@@ -23,6 +23,7 @@ async function cargarDatosInvitado() {
         // Rellenar tarjetas
         document.getElementById("nombre-invitado").innerHTML = invitado.nombre;
         document.getElementById("pases-invitado").innerHTML = "Pases: " + invitado.acompanantes;
+        document.getElementById("mesa-invitado").innerHTML = "Mesa: " + invitado.mesa;
 
         // Rellenar formulario
         document.getElementById("nombre").value = invitado.nombre;
