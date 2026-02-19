@@ -56,6 +56,7 @@ async function cargarInvitados() {
             <td>${index + 1}</td>
             <td>${inv.nombre}</td>
             <td>${inv.acompanantes}</td>
+            <td>${inv.mesa}</td>
             <td>${inv.confirmado ? "✔️ Sí" : "❌ No"}</td>
            
 
