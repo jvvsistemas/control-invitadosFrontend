@@ -104,7 +104,7 @@ async function regenerarToken(id) {
 
 /* EXPORTAR A EXCEL */
 document.getElementById("btn-exportar").addEventListener("click", async () => {
-    const response = await fetch(`https://control-invitados-mis-xv.onrender.com/admin/listarInvitados`);
+    const response = await fetch(`https://control-invitadosbackend.onrender.com/admin/listarInvitados`);
     const invitados = await response.json();
 
     let csv = "Nombre,Pases,Confirmado,Token\n";
